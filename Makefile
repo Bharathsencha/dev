@@ -6,21 +6,21 @@
 up: start
 
 start:
-	@echo "🚀 Starting DevOps Monitoring Stack..."
+	@echo "Starting DevOps Monitoring Stack..."
 	docker compose up --build -d
-	@echo "\n✅ All services started successfully!"
+	@echo "\nAll services started successfully!"
 	@echo "--------------------------------------------------------"
-	@echo "📊 Grafana:       http://localhost:3000 (admin / admin)"
-	@echo "🔥 Prometheus:    http://localhost:9090/targets"
-	@echo "🌐 Flask App:     http://localhost:5000"
-	@echo "📈 Metrics:       http://localhost:5000/metrics"
-	@echo "💻 Node Exporter: http://localhost:9100/metrics"
+	@echo "Grafana:       http://localhost:3000 (admin / admin)"
+	@echo "Prometheus:    http://localhost:9090/targets"
+	@echo "Flask App:     http://localhost:5000"
+	@echo "Metrics:       http://localhost:5000/metrics"
+	@echo "Node Exporter: http://localhost:9100/metrics"
 	@echo "--------------------------------------------------------"
-	@echo "💡 Tip: Run 'make traffic' in another terminal to generate live data!"
+	@echo "Tip: Run 'make traffic' in another terminal to generate live data!"
 
 ## Generate live simulated traffic
 traffic:
-	@echo "🧪 Running traffic generator..."
+	@echo "Running traffic generator..."
 	@./generate_traffic.sh
 
 ## View running container status
@@ -35,7 +35,7 @@ logs:
 stop: down
 
 down:
-	@echo "🛑 Stopping DevOps Monitoring Stack..."
+	@echo "Stopping DevOps Monitoring Stack..."
 	docker compose down
 
 ## Restart the stack
@@ -43,7 +43,7 @@ restart: down up
 
 ## Stop and clean all containers and volumes
 clean:
-	@echo "🧹 Cleaning up all containers and persistent volumes..."
+	@echo "Cleaning up all containers and persistent volumes..."
 	docker compose down -v --remove-orphans
 
 ## Show available Makefile commands
