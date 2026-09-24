@@ -23,6 +23,10 @@ traffic:
 	@echo "Running traffic generator..."
 	@./generate_traffic.sh
 
+## Generate PDF report in Downloads
+pdf:
+	@python3 generate_pdf_report.py
+
 ## View running container status
 status:
 	docker compose ps
